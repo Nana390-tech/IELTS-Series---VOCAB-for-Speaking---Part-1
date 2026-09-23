@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IELTS Vocabulary 1 · Everyday Words</title>
+<style>
+:root{
+  --cran:#12664F; --cran-d:#0B4536; --pink:#D9EFE6;
+  --mint:#B3306B; --mint-l:#FBE0EC; --bg:#EEF5F2;
+  --ink:#16261F; --soft:#4F6159; --line:#C6DCD1; --white:#fff;
+  --ok:#1F8A5B; --bad:#B3261E;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI","Trebuchet MS",system-ui,-apple-system,Roboto,sans-serif;
+  font-size:19px;line-height:1.55}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em}
+.ar{font-family:"Segoe UI",Tahoma,"Arial",sans-serif;direction:rtl;unicode-bidi:isolate}
+button{font:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
+mark{background:var(--pink);color:var(--cran-d);padding:0 .2em;border-radius:4px;font-weight:600}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--cran);color:#fff;
+  padding:12px 20px;padding-top:calc(12px + env(safe-area-inset-top,0px));
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bar .brand{font-family:Georgia,serif;font-size:1.15rem;font-weight:700;cursor:pointer;background:none;border:0;color:#fff;padding:0}
+.bar .grow{flex:1}
+.pts{background:#fff;color:var(--cran-d);border-radius:999px;padding:4px 14px;font-weight:700}
+.tbtn{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff;border-radius:10px;padding:5px 12px;font-size:.9rem}
+.tbtn:hover{background:rgba(255,255,255,.15)}
+
+main{max-width:1040px;margin:0 auto;padding:24px 18px 60px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;margin:10px 0 34px}
+.hero h1{font-size:2.6rem;color:var(--cran-d)}
+.hero p{color:var(--soft);margin:.2em 0 1em;max-width:34em}
+.chat{display:flex;flex-direction:column;gap:12px}
+.bub{max-width:88%;padding:14px 18px;border-radius:20px;font-size:1.05rem}
+.bub.ex{background:#fff;border:2px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.bub.me{background:var(--cran);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.bub small{display:block;font-size:.78rem;opacity:.75;margin-bottom:2px}
+.mic{background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.mic .bars path{transform-origin:center;animation:pulse 1.6s ease-in-out infinite}
+.mic .bars path:nth-child(2n){animation-delay:.2s}
+.mic .bars path:nth-child(3n){animation-delay:.4s}
+@keyframes pulse{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+.namecard{display:inline-block;background:var(--pink);border-radius:10px;padding:6px 18px;margin-top:6px}
+.namecard span{display:block;font-size:.75rem;color:var(--cran-d);letter-spacing:.08em;text-transform:uppercase}
+.namecard b{font-family:Georgia,serif;font-size:1.2rem;color:var(--cran-d)}
+.sub{max-width:620px;margin:0 0 28px}
+.sub .lbl{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mint);font-weight:700;margin-bottom:8px}
+.facts{background:var(--mint-l);border-left:6px solid var(--mint);border-radius:0 14px 14px 0;padding:16px 20px;margin-bottom:30px}
+.facts ul{margin:.3em 0 0;padding-left:1.2em}
+.facts li{margin:.25em 0}
+
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.tile{background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px;text-align:left;color:var(--ink);position:relative;transition:border-color .15s}
+.tile:hover{border-color:var(--cran)}
+.tile .ico{font-size:2rem}
+.tile h3{margin:.3em 0 .2em;font-size:1.3rem}
+.tile .prog{height:8px;background:var(--mint-l);border-radius:8px;overflow:hidden;margin-top:10px}
+.tile .prog i{display:block;height:100%;background:var(--mint)}
+.tile .badge{position:absolute;top:12px;right:14px;font-size:1.5rem}
+.tile.final{background:var(--cran-d);color:#fff;border-color:var(--cran-d)}
+.tile.final:hover{border-color:var(--mint)}
+
+/* topic page */
+.back{background:none;border:0;color:var(--cran);font-weight:600;padding:0;margin-bottom:12px}
+.thead{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.thead .ico{font-size:2.6rem}
+.thead h2{font-size:2rem;margin:0;color:var(--cran-d)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.step{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;color:var(--ink);font-size:.95rem}
+.step.on{background:var(--cran);border-color:var(--cran);color:#fff}
+.step.done::after{content:" ✓";color:var(--mint);font-weight:700}
+.step.on.done::after{color:#fff}
+.panel{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px}
+.panel > p.lead{color:var(--soft);margin-top:0}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{border:2px solid var(--line);border-radius:14px;padding:16px;background:var(--bg)}
+.card .ph{font-size:1.2rem;font-weight:700;color:var(--cran-d)}
+.card .ar{font-size:1.15rem;color:var(--mint);margin:.2em 0}
+.card .mean{margin:.3em 0;font-weight:600}
+.card .eg{font-style:italic;color:var(--soft)}
+.card.seen{border-color:var(--mint);background:var(--mint-l)}
+.say{margin-top:10px;background:#fff;border:2px solid var(--mint);color:var(--mint);border-radius:10px;padding:5px 12px;font-size:.9rem;font-weight:600}
+.card.seen .say{background:var(--mint);color:#fff}
+
+.band{border-radius:16px;padding:16px 18px;margin:12px 0;border:2px solid var(--line);background:var(--bg)}
+.band h4{margin:0 0 6px;font-size:1rem;display:flex;gap:10px;align-items:center}
+.band .lvl{border-radius:999px;padding:2px 12px;color:#fff;font-weight:700}
+.b5 .lvl{background:#8A8F91}.b6 .lvl{background:var(--mint)}.b7 .lvl{background:var(--cran)}
+.band .txt{font-size:1.08rem}
+.why{margin-top:10px;background:#fff;border-radius:10px;padding:10px 14px;border-left:5px solid var(--mint);display:none}
+.why.show{display:block}
+.whyb{margin-top:8px;background:none;border:2px solid var(--ink);border-radius:10px;padding:4px 12px;font-size:.9rem}
+
+.q{font-size:1.2rem;font-weight:700;margin:0 0 12px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:12px 16px;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:var(--cran)}
+.opt.right{background:#E0F3E9;border-color:var(--ok)}
+.opt.wrong{background:#FBE5E3;border-color:var(--bad)}
+.opt:disabled{cursor:default}
+.fb{margin-top:12px;padding:12px 16px;border-radius:12px;display:none}
+.fb.show{display:block}
+.fb.good{background:#E0F3E9;color:#12593A}
+.fb.poor{background:#FBE5E3;color:#7E1A14}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px;flex-wrap:wrap}
+.btn{background:var(--cran);color:#fff;border:0;border-radius:12px;padding:10px 20px;font-weight:600}
+.btn:hover{background:var(--cran-d)}
+.btn.ghost{background:#fff;color:var(--cran);border:2px solid var(--cran)}
+.btn:disabled{opacity:.45;cursor:default}
+.count{color:var(--soft);font-size:.95rem}
+
+.gap{font-size:1.15rem;line-height:2.3}
+.gap select{font:inherit;font-size:1rem;padding:4px 8px;border-radius:8px;border:2px solid var(--cran);background:var(--pink);color:var(--cran-d);max-width:100%}
+.gap select.ok{border-color:var(--ok);background:#E0F3E9;color:#12593A}
+.gap select.no{border-color:var(--bad);background:#FBE5E3}
+
+.speak{border:2px solid var(--line);border-radius:16px;padding:18px;margin-bottom:16px}
+.speak.done{border-color:var(--mint);background:var(--mint-l)}
+.speak .starter{background:#fff;border:2px dashed var(--mint);border-radius:10px;padding:8px 12px;margin:8px 0;display:inline-block}
+.timer{height:14px;background:var(--line);border-radius:10px;overflow:hidden;margin:12px 0 6px}
+.timer i{display:block;height:100%;width:0;background:var(--mint);transition:width .25s linear}
+.timer.think i{background:#B3306B}
+.tlabel{font-weight:700;font-size:.95rem;min-height:1.4em}
+.checks label{display:block;margin:4px 0}
+.checks input{width:20px;height:20px;vertical-align:middle;margin-right:8px;accent-color:var(--mint)}
+
+.result{text-align:center;padding:10px}
+.result .big{font-family:Georgia,serif;font-size:3.2rem;color:var(--cran-d);font-weight:700}
+.cert{display:none;margin:24px auto 0;max-width:760px;border:10px double var(--cran);border-radius:6px;padding:36px;text-align:center;background:#fff}
+.cert.show{display:block}
+.cert h2{font-size:2.2rem;color:var(--cran-d)}
+.cert .nm{font-family:Georgia,serif;font-size:2rem;border-bottom:2px solid var(--mint);display:inline-block;padding:0 30px 4px;margin:10px 0}
+.namein{font:inherit;padding:8px 12px;border-radius:10px;border:2px solid var(--line);width:min(340px,100%)}
+
+footer{text-align:center;color:var(--soft);font-size:.9rem;padding:20px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:12px;z-index:60;opacity:0;transition:opacity .3s}
+.toast.show{opacity:1}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+  body{font-size:18px}
+  .panel{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.mic .bars path{animation:none}}
+@media print{
+  body *{visibility:hidden}
+  .cert,.cert *{visibility:visible}
+  .cert{position:absolute;left:0;top:0;width:100%;border-color:var(--cran)}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <button class="brand" onclick="goHome()">Vocabulary 1 · Everyday Words</button>
+  <span class="grow"></span>
+  <span class="pts" id="pts">0 points</span>
+  <button class="tbtn" onclick="saveJSON()">Save progress</button>
+  <button class="tbtn" onclick="document.getElementById('loadf').click()">Load progress</button>
+  <input type="file" id="loadf" accept=".json" hidden onchange="loadJSON(event)">
+</div>
+<main id="app"></main>
+<footer>Designed by: Nazila Motahari</footer>
+<canvas id="confetti"></canvas>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ DATA ============ */
+const FQ = "Which word or phrase means: ";
+const TOPICS = [
+{id:"home", name:"Home and family", ico:"🏡",
+ phrases:[
+  ["spacious","واسع","having a lot of room inside","Our villa is spacious, so we each have a room."],
+  ["cosy","دافئ ومريح","small, warm and comfortable","My bedroom is small but really cosy."],
+  ["neighbourhood","الحيّ","the area around your home","We live in a quiet neighbourhood near a park."],
+  ["extended family","العائلة الممتدة","aunts, uncles, cousins and grandparents","My extended family meets every Friday."],
+  ["get on well with","ينسجم مع","have a good relationship with someone","I get on well with my younger brother."],
+  ["take after","يشبه (في الطباع أو الشكل)","look or behave like an older relative","I take after my mother — we're both very calm."]],
+ ladder:{q:"Tell me about the place where you live.",
+  b5:"I live in a big house. It is nice. My family is big.",
+  n5:"“Big” and “nice” are the first words everyone reaches for. They describe nothing.",
+  b6:"I live in a villa in a quiet [[neighbourhood]] in Khalifa City. It's quite [[spacious]], so we each have our own room.",
+  n6:"Two precise words replace “big” and “nice”, and the answer says where.",
+  b7:"I live in a villa in a fairly quiet [[neighbourhood]]. It's [[spacious]], although my favourite room is the smallest — my bedroom is tiny but [[cosy]]. My [[extended family]] comes over most Fridays, so the house gets noisy.",
+  n7:"Four target words, used naturally, plus a contrast between spacious and cosy."},
+ upgrade:[
+  {q:"Which word completes the sentence? “My aunts, uncles and cousins are my ___ family.”",o:["extended","extending","extensive"],c:0,
+   w:"Extended family means all your relatives beyond your parents and brothers and sisters."},
+  {q:"Complete: “I get on ___ with my sister.”",o:["well","good","nice"],c:0,
+   w:"The phrase is fixed: get on well with someone."},
+  {q:"Complete: “I take ___ my father — we have the same laugh.”",o:["after","for","on"],c:0,
+   w:"Take after someone = resemble an older relative."}],
+ gap:{t:"I live in a villa in a quiet {0} in Al Ain. It's quite {1}, so everyone has their own room. My {2} comes over every Friday, and I {3} my cousins.",
+  a:["neighbourhood","spacious","extended family","get on well with"],x:["cosy","take after"]},
+ speak:[["Describe your home.","Use: spacious, cosy, neighbourhood"],
+  ["Which family member are you closest to?","Use: get on well with, take after"]]},
+
+{id:"study", name:"Study and work", ico:"🎓",
+ phrases:[
+  ["major in","يتخصص في","study something as your main subject","I'm majoring in business at HCT."],
+  ["assignment","واجب / مهمة دراسية","a piece of work your teacher gives you","We have three assignments due this week."],
+  ["deadline","الموعد النهائي","the last day to finish something","The deadline for the report is Sunday."],
+  ["demanding","شاق / كثير المتطلبات","needing a lot of time and effort","Engineering is a demanding course."],
+  ["hands-on","عملي تطبيقي","practical — doing rather than reading","I learn more in hands-on lab sessions."],
+  ["career prospects","فرص مهنية مستقبلية","your chances of a good job in the future","IT has excellent career prospects here."]],
+ ladder:{q:"What are you studying?",
+  b5:"I study business. It is difficult. I have much homework.",
+  n5:"Correct, but “difficult” and “homework” are school words, not exam words.",
+  b6:"I'm [[majoring in]] business, and it's quite [[demanding]] — we usually have an [[assignment]] every week.",
+  n6:"Three precise words, and the example explains why it is demanding.",
+  b7:"I'm [[majoring in]] business. It's [[demanding]] — there's an [[assignment]] almost every week and the [[deadlines]] all seem to fall together — but I chose it for the [[career prospects]] in banking.",
+  n7:"Five target words, a small joke about deadlines, and a reason for the choice."},
+ upgrade:[
+  {q:"Complete: “I have to ___ the deadline on Thursday.”",o:["meet","catch","do"],c:0,
+   w:"You meet a deadline, or you miss it."},
+  {q:"Complete: “She's ___ in accounting.”",o:["majoring","mayoring","majority"],c:0,
+   w:"Major in + your main subject."},
+  {q:"Which sounds most natural in the exam?",o:["My course is very hard and has much homework.","My course is demanding, with an assignment almost every week.","My course is difficult, difficult."],c:1,
+   w:"“Demanding” and “assignment” are the words an examiner expects at Band 6."}],
+ gap:{t:"I'm {0} business, and honestly it's quite {1} — we get a new {2} almost every week. What I enjoy most are the {3} sessions in the computer lab.",
+  a:["majoring in","demanding","assignment","hands-on"],x:["deadline","career prospects"]},
+ speak:[["What are you studying, and why did you choose it?","Use: major in, career prospects"],
+  ["What's the hardest part of your course?","Use: demanding, assignment, deadline"]]},
+
+{id:"free", name:"Free time", ico:"⚽",
+ phrases:[
+  ["take up","يبدأ ممارسة (هواية)","start a new hobby or sport","I took up swimming last year."],
+  ["be into","مهتم بـ / يحب كثيرًا","be very interested in something","I'm really into photography at the moment."],
+  ["unwind","يسترخي","relax after a busy day","I play video games to unwind."],
+  ["get together","يجتمع","meet socially with people","We get together every Thursday evening."],
+  ["keep fit","يحافظ على لياقته","stay healthy through exercise","I go to the gym twice a week to keep fit."],
+  ["outdoor activities","أنشطة في الهواء الطلق","things you do outside, like camping","Winter here is perfect for outdoor activities."]],
+ ladder:{q:"What do you do in your free time?",
+  b5:"I play football. I like it. It is good exercise.",
+  n5:"Simple and correct, but every candidate says exactly this.",
+  b6:"I'm really [[into]] football, so I play twice a week. It's the best way to [[unwind]] after classes.",
+  n6:"Two natural phrases replace “I like” and “relax”.",
+  b7:"I'm really [[into]] football, and I [[took up]] cycling last winter as well. We [[get together]] most Thursdays — it's how I [[unwind]] and it [[keeps me fit]] at the same time.",
+  n7:"Four target expressions and two different benefits, all in three sentences."},
+ upgrade:[
+  {q:"Complete: “I'd like to ___ up a new hobby this year.”",o:["take","make","do"],c:0,
+   w:"Take up a hobby, a sport, an instrument."},
+  {q:"Complete: “I'm really ___ traditional music.”",o:["into","in","on"],c:0,
+   w:"Be into something = be very interested in it."},
+  {q:"Complete: “I swim every morning to ___ fit.”",o:["keep","hold","make"],c:0,
+   w:"Keep fit, keep healthy, keep in shape."}],
+ gap:{t:"In my free time I'm really {0} basketball. My cousins and I {1} every Thursday at the court near my house. I also {2} running last year, mainly to {3} before the summer.",
+  a:["into","get together","took up","keep fit"],x:["unwind","outdoor activities"]},
+ speak:[["What do you enjoy doing at the weekend?","Use: be into, get together"],
+  ["How do you relax after a long day?","Use: unwind, keep fit"]]},
+
+{id:"food", name:"Food and eating out", ico:"🍲",
+ phrases:[
+  ["traditional dish","طبق تقليدي","food that is typical of a country","Harees is a traditional Emirati dish."],
+  ["home-cooked","مطبوخ في المنزل","made at home, not bought","Nothing beats a home-cooked meal."],
+  ["eat out","يأكل خارج المنزل","have a meal in a restaurant","We eat out about once a week."],
+  ["have a sweet tooth","يحب الحلويات","love sweet food","I've got a real sweet tooth — I can't say no to dessert."],
+  ["grab a quick bite","يتناول وجبة سريعة","eat something fast because you're busy","I usually grab a quick bite between classes."],
+  ["filling","مشبع","food that makes you feel full","Machboos is very filling."]],
+ ladder:{q:"What kind of food do you like?",
+  b5:"I like machboos. It is very delicious. I eat it always.",
+  n5:"“Delicious” is fine, but the answer gives no detail and “always” is the wrong word.",
+  b6:"I love machboos — it's a [[traditional dish]] here, and it's very [[filling]], so one plate is enough.",
+  n6:"Two precise food words, and a small detail that shows real knowledge.",
+  b7:"I love machboos. It's a [[traditional dish]] and it's so [[filling]] that I can't move afterwards. On weekdays I usually just [[grab a quick bite]] between classes, but I'd always choose [[home-cooked]] food over a restaurant.",
+  n7:"Four target expressions, a contrast between weekdays and weekends, and a preference."},
+ upgrade:[
+  {q:"Complete: “We ___ out every Friday.”",o:["eat","take","make"],c:0,
+   w:"Eat out = have a meal in a restaurant."},
+  {q:"Complete: “I've got a sweet ___.”",o:["tooth","mouth","taste"],c:0,
+   w:"Have a sweet tooth is a fixed expression for loving sugary food."},
+  {q:"Which answer is strongest for Part 1?",o:["Food is good in my country.","I love home-cooked food, especially my mother's machboos — it's very filling.","I eat food every day, many kinds of food."],c:1,
+   w:"Name the dish, describe it, and use one strong food word."}],
+ gap:{t:"My favourite meal is a {0} called harees. It's very {1}, so I don't eat much afterwards. During the week I just {2} between classes, and we only {3} at the weekend.",
+  a:["traditional dish","filling","grab a quick bite","eat out"],x:["home-cooked","have a sweet tooth"]},
+ speak:[["Describe a meal you really enjoy.","Use: traditional dish, filling"],
+  ["Do you prefer eating at home or in restaurants?","Use: home-cooked, eat out"]]},
+
+{id:"tech", name:"Phones and technology", ico:"📱",
+ phrases:[
+  ["browse","يتصفح","look at websites without a clear aim","I browse the news while I have breakfast."],
+  ["scroll through","يمرّر (الشاشة)","move down through a feed with your finger","I scroll through TikTok before bed."],
+  ["handy","عملي ومفيد","useful and easy to use","Maps are really handy when you're driving."],
+  ["screen time","وقت الشاشة","the hours you spend looking at a screen","My screen time is about five hours a day."],
+  ["keep in touch","يبقى على تواصل","stay in contact with people","I keep in touch with my cousins abroad."],
+  ["cut down on","يقلّل من","use or do less of something","I'm trying to cut down on social media."]],
+ ladder:{q:"How often do you use your phone?",
+  b5:"All the time. I use phone for everything. It is very important.",
+  n5:"Honest, but there are no specific words — and “phone” needs “my”.",
+  b6:"All the time, really. I [[scroll through]] social media in the evening and I use it to [[keep in touch]] with my cousins in Oman.",
+  n6:"Two exact phrases show what “using the phone” actually means.",
+  b7:"Constantly, I'm afraid. I [[browse]] the news at breakfast, [[scroll through]] social media at night, and my [[screen time]] is embarrassing — about six hours. I'm trying to [[cut down on]] it before exams.",
+  n7:"Four target expressions, a real number, and an honest comment at the end."},
+ upgrade:[
+  {q:"Complete: “I try to ___ in touch with my old classmates.”",o:["keep","hold","make"],c:0,
+   w:"Keep in touch with someone is fixed."},
+  {q:"Complete: “I want to cut ___ on fast food.”",o:["down","off","up"],c:0,
+   w:"Cut down on = reduce. Cut off means something completely different."},
+  {q:"Which is the most natural?",o:["I scroll through Instagram for about an hour.","I roll Instagram one hour.","I slide Instagram every night."],c:0,
+   w:"Scroll through is the verb English speakers use for a phone feed."}],
+ gap:{t:"I use my phone constantly. I {0} the news in the morning and {1} social media at night. Apps like Maps are really {2}. My {3} is about five hours a day, which is too much.",
+  a:["browse","scroll through","handy","screen time"],x:["keep in touch","cut down on"]},
+ speak:[["What do you use your phone for?","Use: browse, scroll through, handy"],
+  ["Do you spend too much time online?","Use: screen time, cut down on"]]}
+];
+
+function buildFinal(){
+  const all=[];TOPICS.forEach((t,ti)=>t.phrases.forEach(p=>all.push({w:p[0],m:p[2],ti:ti})));
+  const picks=[];TOPICS.forEach((t,ti)=>[0,2,4].forEach(i=>picks.push(all.find(a=>a.ti===ti&&a.w===t.phrases[i][0]))));
+  return picks.map((p,i)=>{
+    const others=all.filter(a=>a.w!==p.w),opts=[p.w];
+    let k=0;while(opts.length<4&&k<200){const c=others[(i*7+k*5+3)%others.length].w;if(!opts.includes(c))opts.push(c);k++;}
+    const pos=i%4,o=opts.slice(),tmp=o[0];o[0]=o[pos];o[pos]=tmp;
+    return {q:FQ+"“"+p.m+"”",o:o,c:pos};});
+}
+const FINAL = buildFinal();
+const STEPS = [["learn","1 · Learn the words"],["ladder","2 · Basic → Better → Best"],["upgrade","3 · Use them correctly"],["gap","4 · Complete the answer"],["speak","5 · Your turn"]];
+
+/* ============ STATE ============ */
+function blank(){
+  const s={points:0,name:"",topics:{},final:{best:0}};
+  TOPICS.forEach(t=>s.topics[t.id]={learn:[],ladder:[],upgrade:{},gap:false,gapTried:false,speak:[]});
+  return s;
+}
+let S=blank();
+let view={page:"home",topic:null,step:"learn"};
+
+function addPts(n){S.points+=n;document.getElementById("pts").textContent=S.points+" points";}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("show"),1800);}
+function mk(s){return s.replace(/\[\[(.+?)\]\]/g,"<mark>$1</mark>");}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+function stepDone(t,st){
+  const p=S.topics[t.id];
+  if(st==="learn")return p.learn.filter(Boolean).length>=t.phrases.length;
+  if(st==="ladder")return (p.ladderSeen||[]).filter(Boolean).length>=3;
+  if(st==="upgrade")return Object.keys(p.upgrade).length>=t.upgrade.length;
+  if(st==="gap")return p.gap;
+  if(st==="speak")return p.speak.filter(Boolean).length>=t.speak.length;
+}
+function topicPct(t){return STEPS.filter(([k])=>stepDone(t,k)).length/STEPS.length;}
+
+/* ============ HOME ============ */
+function setName(v){S.name=v;const e=document.getElementById("hn");if(e)e.textContent=v||"Your name";}
+function goHome(){view={page:"home"};render();window.scrollTo(0,0);}
+function home(){
+  let tiles=TOPICS.map(t=>{const p=topicPct(t);return `
+   <button class="tile" onclick="openTopic('${t.id}')">
+    ${p===1?'<span class="badge" title="Word bank complete">🏅</span>':''}
+    <div class="ico">${t.ico}</div><h3>${t.name}</h3>
+    <div class="count">${Math.round(p*100)}% complete</div>
+    <div class="prog"><i style="width:${p*100}%"></i></div>
+   </button>`}).join("");
+  tiles+=`<button class="tile final" onclick="openFinal()"><div class="ico">🏆</div><h3>Final challenge</h3>
+    <div>15 questions · get 80% for your certificate</div>
+    <div style="margin-top:6px;opacity:.85">Best score: ${S.final.best}/15</div></button>`;
+  return `
+  <section class="hero">
+   <div>
+    <h1>Everyday words</h1>
+    <p>Lesson 1 gave you the phrases for Part 1. This is the vocabulary that goes inside them — the words that replace “nice”, “big” and “I like”, across the five topics the examiner asks about most.</p>
+    <p class="ar" style="text-align:right">هذه المفردات ترافق الدرس الأول وتساعدك على استبدال الكلمات البسيطة بكلمات أدق في الجزء الأول من الاختبار.</p>
+   </div>
+   <div class="mic" aria-hidden="false">
+    <svg viewBox="0 0 340 230" width="100%" role="img"><title>Microphone on the examiner's table</title>
+     <g class="bars" fill="none" stroke="var(--cran)" stroke-linecap="round" stroke-width="7">
+      <path d="M24 108v14" opacity=".30"/><path d="M50 96v38" opacity=".40"/>
+      <path d="M76 80v70" opacity=".55"/><path d="M102 92v46" opacity=".70"/>
+      <path d="M128 66v98" opacity=".85"/>
+      <path d="M212 66v98" opacity=".85"/><path d="M238 92v46" opacity=".70"/>
+      <path d="M264 80v70" opacity=".55"/><path d="M290 96v38" opacity=".40"/>
+      <path d="M316 108v14" opacity=".30"/>
+     </g>
+     <rect x="156" y="36" width="28" height="62" rx="14" fill="var(--mint)"/>
+     <path d="M148 82a22 22 0 0 0 44 0" fill="none" stroke="var(--mint)" stroke-width="5" stroke-linecap="round"/>
+     <path d="M170 104v52" stroke="var(--mint)" stroke-width="5" stroke-linecap="round"/>
+     <rect x="128" y="156" width="84" height="14" rx="7" fill="var(--cran-d)"/>
+     <rect x="20" y="176" width="300" height="9" rx="4" fill="var(--line)"/>
+    </svg>
+    <div class="namecard"><span>Candidate</span><b id="hn">${esc(S.name)||'Your name'}</b></div>
+    <input class="namein" id="heroName" placeholder="Type your name" value="${esc(S.name)}" oninput="setName(this.value)" style="margin-top:10px">
+   </div>
+  </section>
+  <div class="sub"><div class="lbl">Basic words vs better words</div>
+   <div class="chat">
+    <div class="bub ex"><small>Examiner</small>Tell me about your home.</div>
+    <div class="bub me" style="opacity:.55"><small>Basic</small>I live in a big house. It is very nice.</div>
+    <div class="bub me"><small>Better</small>I live in a spacious villa in a quiet neighbourhood — my room is small but cosy.</div>
+   </div>
+  </div>
+  <div class="facts">
+   <strong>How to use this word bank</strong>
+   <ul><li>Thirty words and phrases for the five most common Part 1 topics.</li><li>Learn them in chunks: “get on well with”, not just “get”.</li><li>Say every example out loud — a word you have never spoken is a word you will not use in the test.</li></ul>
+  </div>
+  <h2>Choose a word bank</h2>
+  <div class="topics">${tiles}</div>`;
+}
+
+/* ============ TOPIC ============ */
+function openTopic(id){view={page:"topic",topic:id,step:"learn"};render();window.scrollTo(0,0);}
+function setStep(st){view.step=st;stopTimer();render();}
+function curT(){return TOPICS.find(t=>t.id===view.topic);}
+
+function topicPage(){
+  const t=curT();
+  const steps=STEPS.map(([k,l])=>`<button class="step ${view.step===k?'on':''} ${stepDone(t,k)?'done':''}" onclick="setStep('${k}')">${l}</button>`).join("");
+  const body={learn:learn,ladder:ladder,upgrade:upgrade,gap:gap,speak:speak}[view.step](t);
+  const idx=STEPS.findIndex(s=>s[0]===view.step);
+  const next=idx<STEPS.length-1?`<button class="btn" onclick="setStep('${STEPS[idx+1][0]}')">Next: ${STEPS[idx+1][1].split("· ")[1]}</button>`:`<button class="btn" onclick="goHome()">Back to word banks</button>`;
+  return `<button class="back" onclick="goHome()">← All word banks</button>
+   <div class="thead"><span class="ico">${t.ico}</span><h2>${t.name}</h2></div>
+   <nav class="steps">${steps}</nav>
+   <section class="panel">${body}<div class="nav"><span></span>${next}</div></section>`;
+}
+
+function learn(t){
+  const p=S.topics[t.id];
+  return `<p class="lead">Read the word, its meaning and the example. Say the example out loud, then tap <b>I said it</b>.</p>
+  <div class="cards">${t.phrases.map((ph,i)=>`
+   <div class="card ${p.learn[i]?'seen':''}">
+    <div class="ph">${esc(ph[0])}</div>
+    <div class="ar">${ph[1]}</div>
+    <div class="mean">${esc(ph[2])}</div>
+    <div class="eg">“${esc(ph[3])}”</div>
+    <button class="say" onclick="said(${i})">${p.learn[i]?'✓ Said it':'🗣 I said it'}</button>
+   </div>`).join("")}</div>`;
+}
+function said(i){const p=S.topics[view.topic];if(!p.learn[i]){p.learn[i]=true;addPts(2);checkBadge();}render();}
+
+function ladder(t){
+  const L=t.ladder,p=S.topics[t.id];
+  const b=(k,n,lvl)=>`<div class="band b${lvl}"><h4><span class="lvl">${({5:"Basic",6:"Better",7:"Best"})[lvl]}</span></h4>
+    <div class="txt">${mk(esc(L["b"+lvl]))}</div>
+    <button class="whyb" onclick="why(${k})">${p.ladder[k]?'Hide':'Why is this '+({5:'basic',6:'better',7:'best'})[lvl]+'?'}</button>
+    <div class="why ${p.ladder[k]?'show':''}">${esc(L["n"+lvl])}</div></div>`;
+  return `<p class="lead">The same answer, told three ways. Read all three, then open each explanation. The <mark>highlighted</mark> words are from this word bank.</p>
+   <div class="bub ex" style="margin-bottom:8px"><small>Examiner</small>${esc(L.q)}</div>
+   ${b(0,"n5",5)}${b(1,"n6",6)}${b(2,"n7",7)}`;
+}
+function why(k){const p=S.topics[view.topic];if(!p.ladderSeen)p.ladderSeen=[];
+  if(!p.ladderSeen[k]){p.ladderSeen[k]=true;addPts(2);}
+  p.ladder[k]=!p.ladder[k];checkBadge();render();}
+
+function upgrade(t){
+  const p=S.topics[t.id];
+  return `<p class="lead">Which answer would get the best score? Choose one.</p>`+
+  t.upgrade.map((u,i)=>{
+    const a=p.upgrade[i];
+    return `<div style="margin-bottom:26px"><p class="q">${i+1}. ${esc(u.q)}</p><div class="opts">
+     ${u.o.map((o,j)=>{let c="";if(a!==undefined){if(j===u.c)c="right";else if(j===a)c="wrong";}
+       return `<button class="opt ${c}" ${a!==undefined?'disabled':''} onclick="pick(${i},${j})">${String.fromCharCode(65+j)}. ${esc(o)}</button>`}).join("")}
+     </div><div class="fb ${a!==undefined?'show '+(a===u.c?'good':'poor'):''}">${a!==undefined?(a===u.c?'✓ Correct. ':'✗ Not this one. ')+esc(u.w):''}</div></div>`}).join("");
+}
+function pick(i,j){const t=curT(),p=S.topics[t.id];if(p.upgrade[i]!==undefined)return;p.upgrade[i]=j;if(j===t.upgrade[i].c){addPts(10);toast("+10 points");}checkBadge();render();}
+
+function gap(t){
+  const g=t.gap,p=S.topics[t.id];
+  const opts=[...g.a,...g.x].sort();
+  let html=esc(g.t).replace(/\{(\d)\}/g,(m,n)=>{
+    const val=p.gapVals?p.gapVals[n]:"";
+    const cls=p.gapTried?(val===g.a[n]?"ok":"no"):"";
+    return `<select aria-label="Gap ${+n+1}" class="${cls}" onchange="gapSet(${n},this.value)"><option value="">— choose —</option>${opts.map(o=>`<option ${val===o?'selected':''}>${esc(o)}</option>`).join("")}</select>`;});
+  return `<p class="lead">Complete the answer with the right word. Two words are not needed.</p>
+   <div class="gap">${html}</div>
+   <div class="nav"><button class="btn ghost" onclick="gapCheck()">Check my answers</button>
+   <span class="count">${p.gap?'✓ All correct — now read it aloud!':''}</span></div>`;
+}
+function gapSet(n,v){const p=S.topics[view.topic];if(!p.gapVals)p.gapVals=["","","",""];p.gapVals[n]=v;}
+function gapCheck(){const t=curT(),p=S.topics[t.id];if(!p.gapVals)p.gapVals=["","","",""];
+  const right=p.gapVals.filter((v,i)=>v===t.gap.a[i]).length;p.gapTried=true;
+  if(right===4&&!p.gap){p.gap=true;addPts(15);toast("+15 points");checkBadge();}
+  else if(right<4)toast(right+" of 4 correct — fix the red ones");
+  render();}
+
+let TMR=null;
+function stopTimer(){if(TMR){clearInterval(TMR);TMR=null;}}
+function speak(t){
+  const p=S.topics[t.id];
+  return `<p class="lead">Answer out loud and use the words from this bank. Take 10 seconds to think, then speak for 40 seconds.</p>`+
+  t.speak.map((s,i)=>`<div class="speak ${p.speak[i]?'done':''}" id="sp${i}">
+    <div class="bub ex" style="display:inline-block"><small>Examiner</small>${esc(s[0])}</div>
+    <div><span class="starter">🗝 Use: <b>${esc(s[1])}</b></span></div>
+    <div class="timer" id="tb${i}"><i></i></div><div class="tlabel" id="tl${i}"></div>
+    <div class="checks">
+     <label><input type="checkbox"> I used at least two words from this bank</label>
+     <label><input type="checkbox"> I gave a reason or an example</label>
+     <label><input type="checkbox"> I said the words clearly, with the right stress</label>
+    </div>
+    <div class="nav" style="margin-top:8px"><button class="btn ghost" onclick="runTimer(${i})">▶ Start timer</button>
+     <button class="btn" onclick="spokeDone(${i})">${p.speak[i]?'✓ Done':'I answered it'}</button></div>
+   </div>`).join("");
+}
+function runTimer(i){
+  stopTimer();const bar=document.querySelector("#tb"+i),fill=bar.querySelector("i"),lab=document.getElementById("tl"+i);
+  let phase="think",left=10,total=10;bar.classList.add("think");
+  const tick=()=>{fill.style.width=((total-left)/total*100)+"%";
+    lab.textContent=phase==="think"?`Think… ${left}s`:`Speak now! ${left}s`;
+    if(left<=0){if(phase==="think"){phase="speak";left=40;total=40;bar.classList.remove("think");fill.style.width="0";lab.textContent="Speak now! 40s";return;}
+      stopTimer();lab.textContent="Time's up. How did it go? Tick the boxes.";return;}
+    left--;};
+  tick();TMR=setInterval(tick,1000);
+}
+function spokeDone(i){const p=S.topics[view.topic];if(!p.speak[i]){p.speak[i]=true;addPts(5);checkBadge();}stopTimer();render();}
+
+function checkBadge(){const t=curT();if(!t)return;const p=S.topics[t.id];
+  if(topicPct(t)===1&&!p.badge){p.badge=true;addPts(20);toast("🏅 Word bank complete! +20 points");confetti();}}
+
+/* ============ FINAL ============ */
+let F=null;
+function openFinal(){F={i:0,score:0,ans:null,done:false};view={page:"final"};render();window.scrollTo(0,0);}
+function finalPage(){
+  if(F.done){
+    const pct=Math.round(F.score/FINAL.length*100),pass=pct>=80;
+    return `<button class="back" onclick="goHome()">← All word banks</button><section class="panel result">
+     <h2>Your result</h2><div class="big">${F.score} / ${FINAL.length}</div><p>${pct}%</p>
+     ${pass?`<p>Excellent! Type your name to get your certificate.</p>
+      <input class="namein" id="nm" placeholder="Your full name" value="${esc(S.name)}" oninput="S.name=this.value;document.getElementById('cn').textContent=this.value||'Your name'">
+      <div class="nav" style="justify-content:center"><button class="btn" onclick="window.print()">Print certificate</button></div>`
+      :`<p>You need 12 out of 15 for the certificate. Review the word banks and try again.</p>`}
+     <div class="nav" style="justify-content:center"><button class="btn ghost" onclick="openFinal()">Try again</button></div>
+     <div class="cert ${pass?'show':''}">
+      <div style="font-size:2.4rem">🏆</div><h2>Certificate of Achievement</h2>
+      <p>This certifies that</p><div class="nm" id="cn">${esc(S.name)||'Your name'}</div>
+      <p>has completed <b>IELTS Vocabulary 1: Everyday Words</b><br>(Part 1 topic vocabulary) with a score of <b>${F.score}/${FINAL.length}</b>.</p>
+      <p style="color:var(--soft)">${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</p>
+      <p style="margin-top:24px;font-size:.9rem">Designed by: Nazila Motahari</p>
+     </div></section>`;
+  }
+  const q=FINAL[F.i];
+  return `<button class="back" onclick="goHome()">← All word banks</button>
+   <section class="panel"><div class="count">Question ${F.i+1} of ${FINAL.length} · Score ${F.score}</div>
+   <p class="q" style="margin-top:10px">${esc(q.q)}</p>
+   <div class="opts">${q.o.map((o,j)=>{let c="";if(F.ans!==null){if(j===q.c)c="right";else if(j===F.ans)c="wrong";}
+     return `<button class="opt ${c}" ${F.ans!==null?'disabled':''} onclick="fpick(${j})">${String.fromCharCode(65+j)}. ${esc(o)}</button>`}).join("")}</div>
+   <div class="nav"><span></span><button class="btn" ${F.ans===null?'disabled':''} onclick="fnext()">${F.i===FINAL.length-1?'See my result':'Next question'}</button></div></section>`;
+}
+function fpick(j){if(F.ans!==null)return;F.ans=j;if(j===FINAL[F.i].c){F.score++;addPts(5);}render();}
+function fnext(){if(F.i<FINAL.length-1){F.i++;F.ans=null;}else{F.done=true;if(F.score>S.final.best)S.final.best=F.score;if(F.score/FINAL.length>=.8)confetti();}render();}
+
+/* ============ SAVE / LOAD ============ */
+function saveJSON(){const b=new Blob([JSON.stringify({app:"speaking-vocab-1",saved:new Date().toISOString(),state:S},null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="speaking-vocab-1-progress.json";a.click();toast("Progress saved to your downloads");}
+function loadJSON(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{const d=JSON.parse(r.result);if(d.app!=="speaking-vocab-1"||!d.state)throw 0;S=Object.assign(blank(),d.state);
+    TOPICS.forEach(t=>{if(!S.topics[t.id])S.topics[t.id]=blank().topics[t.id];});
+    addPts(0);render();toast("Progress loaded");}catch(_){toast("This file is not a Vocabulary 1 progress file");}};
+  r.readAsText(f);e.target.value="";}
+
+/* ============ CONFETTI ============ */
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const c=document.getElementById("confetti"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;
+  const cols=["#12664F", "#B3306B", "#D9EFE6", "#4EA98A", "#FBE0EC"];
+  const ps=Array.from({length:140},()=>({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,r:4+Math.random()*6,vy:2+Math.random()*3,vx:-1.5+Math.random()*3,a:Math.random()*6,col:cols[Math.random()*cols.length|0]}));
+  let f=0;(function loop(){x.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.y+=p.vy;p.x+=p.vx;p.a+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.col;x.fillRect(-p.r,-p.r/2,p.r*2,p.r);x.restore();});
+    if(++f<200)requestAnimationFrame(loop);else x.clearRect(0,0,c.width,c.height);})();
+}
+
+/* ============ RENDER ============ */
+function render(){
+  const app=document.getElementById("app");
+  app.innerHTML=view.page==="home"?home():view.page==="topic"?topicPage():finalPage();
+}
+render();
+</script>
+</body>
+</html>
